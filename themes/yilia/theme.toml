@@ -21,7 +21,7 @@ theme_avatar = "头像"
 theme_subtitle = "副标题"
 
 theme_menu = [
-    {url = "123", name="ce"}
+    {url = "123", name="菜单"}
 ]
 
 theme_smart_menu = [
@@ -29,6 +29,12 @@ theme_smart_menu = [
 ]
 
 theme_subnav = [1,2,3]
+
+theme_mathjax = true
+
+theme_open_in_new = false
+
+theme_toc_hide_index = false
 
 # The theme author info: you!
 [author]

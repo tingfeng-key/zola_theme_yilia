@@ -8,6 +8,10 @@
     <link rel="dns-prefetch" href="{{ config.base_url }}">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href='{{ get_url(path="main.0cf68a.css", trailing_slash=false) }}'>
+    <script src='{{ get_url(path="main.0cf68a.js", trailing_slash=false) }}'></script>
+    <script src='{{ get_url(path="mobile.992cbe.js", trailing_slash=false) }}'></script>
+    <script src='{{ get_url(path="slider.e37972.js", trailing_slash=false) }}'></script>
     {% if config.generate_feed %}
     <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif %}
@@ -33,6 +37,7 @@
                 </div>
             </div>
         </div>
+        {{ macros::footer() }}
     </div>
 </div>
 </body>
