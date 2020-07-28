@@ -1,0 +1,33 @@
+# The URL the site will be built for
+base_url = "https://example.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[extra]
+# Put all your custom variables here
+
+theme_root = "https://example.com"
+
+theme_author = "作者"
+
+theme_avatar = "头像"
+
+theme_subtitle = "副标题"
+
+theme_menu = [
+    {url = "123", name="ce"}
+]
+
+theme_smart_menu = [
+    {url = "123", name="ce"}
+]
+
+theme_subnav = [1,2,3]

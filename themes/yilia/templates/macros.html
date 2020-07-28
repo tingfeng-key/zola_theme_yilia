@@ -1,0 +1,42 @@
+{% macro left_col() %}
+<div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="{{ config.extra.theme_root }}" class="profilepic">
+            <img src="{{ config.extra.theme_avatar}}" class="js-avatar">
+        </a>
+        <hgroup>
+            <h1 class="header-author">
+                <a href="{{ config.extra.theme_root }}">{{ config.extra.theme_author}}</a>
+            </h1>
+        </hgroup>
+        {% if config.extra.theme_subtitle %}
+        <p class="header-subtitle">{{ config.extra.theme_subtitle }}</p>
+        {% endif %}
+
+        <nav class="header-menu">
+            <ul>
+                {% for menu in config.extra.theme_menu %}
+                <li><a href="{{ menu.url }}">{{ menu.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <nav class="header-smart-menu">
+            {% for smart_menu in config.extra.theme_smart_menu %}
+                {% if smart_menu %}
+                <a q-on="click: openSlider(e, '<%-i%>')" href="javascript:void(0)">{{ smart_menu }}</a>
+                {% endif %}
+            {% endfor %}
+        </nav>
+        <nav class="header-nav">
+            <div class="social">
+                {% for subnav in config.extra.theme_subnav %}
+                <a class="{{ subnav }}" target="_blank" href="{{ subnav }}" title="{{ subnav }}">
+                    <i class="icon-{{ subnav }}"></i>
+                </a>
+                {% endfor %}
+            </div>
+        </nav>
+    </header>
+</div>
+{% endmacro left_col %}
